@@ -1,0 +1,58 @@
+@media print {
+  .slide {
+    page-break-after: always;
+    page-break-inside: avoid;
+    display: block !important;
+    position: relative !important;
+    opacity: 1 !important;
+    transform: none !important;
+    break-after: page;
+  }
+  
+  .slide-container {
+    height: auto;
+    overflow: visible;
+  }
+  
+  .nav-buttons {
+    display: none !important;
+  }
+  
+  #slide-counter {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--color-gray);
+    display: block !important;
+  }
+  
+  body {
+    height: auto;
+    overflow: visible;
+  }
+  
+  @page {
+    size: landscape;
+    margin: 0.5cm;
+  }
+  
+  .slide {
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .slide-content {
+    page-break-inside: avoid;
+    flex: 1 !important;
+    height: 100% !important;
+    min-height: 70vh !important;
+  }
+  
+  /* チャートやグラフの印刷対応 */
+  canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+}
